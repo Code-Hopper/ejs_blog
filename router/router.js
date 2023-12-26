@@ -1,10 +1,12 @@
 import express from "express"
 
-import { getHome } from "../controllers/controller.js"
+import { getHome , getCompose } from "../controllers/controller.js"
 
 let router = express()
 
 router.get("/", getHome)
+
+router.get("/compose-blog",getCompose)
 
 
 export { router }
