@@ -1,5 +1,50 @@
 <%- include('./partials/header.ejs'); %>
 
-<h1>compose a blog</h1>
+    <div class="container-fluid">
+        <div class="container p-5 ">
+            <form action="/compose-blog" method="post">
+                <h1>Please Compose a Blog !</h1>
+                <div class="d-flex flex-column bg-dark gap-5 p-3 rounded text-light">
+                    <div class="row">
+                        <div class="col">
+                            <input class="form-control" type="text" placeholder="Blog Titile" name="blog_title"
+                                required>
+                        </div>
+                        <div class="col">
+                            <input class="form-control" type="text" placeholder="Blog Author" name="blog_author"
+                                required>
+                        </div>
+                    </div>
 
-<%- include('./partials/footer.ejs'); %>
+                    <div class="row">
+                        <div class="col-4">
+                            <span class="fs-3">Please Select the blog cati...</span>
+                        </div>
+                        <div class="col">
+                            <select class="form-select" name="blog_cat" id="">
+                                <option value="social">Social</option>
+                                <option value="Political">Political</option>
+                                <option value="sports">Sports</option>
+                                <option value="news">News</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <label for="">Thumbnail for the Blog</label>
+                        <input type="file" name="blog_thumb" placeholder="blog thumbnail" required>
+                    </div>
+
+                    <textarea class="form-control" name="blog_data" id="" cols="30" rows="10"
+                        placeholder="write about the titile"></textarea>
+                </div>
+                <div class="text-center my-3">
+                    <button class="btn btn-success shadow-lg">Post this blog !</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include('./partials/footer.ejs'); %>
