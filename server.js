@@ -2,6 +2,12 @@ import express from "express"
 import dotenv from "dotenv"
 import bodyParser from "body-parser"
 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 import { router } from "./router/router.js"
 
 dotenv.config({ path: "./config.env" })
@@ -14,7 +20,7 @@ app.use(express.json())
 
 app.use(bodyParser.urlencoded({extended:true}))
 
-app.use(express.static("./public"))
+app.use(express.static(__dirname + '/public'));
 
 app.set("view engine", "ejs")
 

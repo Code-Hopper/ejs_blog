@@ -1,0 +1,10 @@
+<%- include("./partials/header.ejs") %>
+
+    <% ReadBlog.forEach((data)=>{ %>
+        <h1><%= data.blog_title%></h1>
+        <h1><%= data.blog_author %></h1>
+        <h1><%= data.blog_cat%></h1>
+        <h1><%= data.blog_data%></h1>
+    <% }) %>
+
+<%- include("./partials/footer.ejs") %>

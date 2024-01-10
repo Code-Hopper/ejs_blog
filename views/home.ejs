@@ -2,15 +2,40 @@
 
 
     <div class="container-fluid heros-section">
-        <div class="container">
-            <div class="d-flex align-items-center text-light justify-content-center">
-                <h1>Welcome to</h1>
-                <a class="navbar-brand fs-1 fw-semibold text-light" href="">Blog<span class="text-danger">4</span>U</a>
+        <div class="container heros">
+
+            <div class="row">
+
+                <% blogs.forEach((blog)=>{ %>
+
+                    <div class="col-4">
+
+                        <div class="card">
+                            <img class="img-fluid card-img-top w-25" src="https://picsum.photos/50/50
+                            " alt="">
+                            <div class="card-body">
+                                <h3>
+                                    <%= blog.blog_title %>
+                                </h3>
+                                <h4>
+                                    <%= blog.blog_author %>
+                                </h4>
+                                <h5>
+                                    <%= blog.blog_cat %>
+                                </h5>
+                                <button class="btn btn-primary">
+                                    <a class="text-light text-decoration-none"
+                                        href="/readingblog/<%= blog.blog_title%>">
+                                        Read More ..</a></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <% }) %>
+
             </div>
 
-            <p class="p-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nam delectus officiis amet doloremque nobis similique provident odit perspiciatis, animi iusto qui, et nulla eum repellendus deleniti, distinctio cum cupiditate? Aliquid nam ex debitis in hic sequi ipsa optio odio! A vel harum qui commodi, soluta veniam perferendis adipisci debitis reprehenderit laudantium quod at natus voluptatibus fuga nam doloremque tenetur ipsam magnam, quibusdam illum praesentium unde. Voluptate dignissimos vero odio, velit id excepturi unde officiis similique. Voluptatem eaque harum nihil, laudantium non odit. Fuga optio vero modi praesentium hic esse, libero eligendi pariatur eius iusto impedit ducimus illo et sequi earum. Alias ratione porro, architecto id consectetur at repellat quaerat recusandae voluptatem iusto inventore aspernatur dolores autem quisquam maxime necessitatibus reiciendis laboriosam unde quidem a eius qui reprehenderit. Facilis in cupiditate numquam dignissimos dolor dolores vel a totam minus laboriosam unde, officiis ex expedita, eligendi suscipit cumque maxime et sint!
-            </p>
         </div>
     </div>
 
